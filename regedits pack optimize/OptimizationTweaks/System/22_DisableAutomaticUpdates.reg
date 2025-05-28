@@ -1,0 +1,30 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Automatic Updates
+; WARNING: This disables automatic updates which may leave your system vulnerable
+; Make sure to manually update your system regularly
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+"AUOptions"=dword:00000001
+"ScheduledInstallDay"=dword:00000000
+"ScheduledInstallTime"=dword:00000000
+
+; Disable Windows Update automatic restart
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"SetDisablePauseUXAccess"=dword:00000001
+"SetDisableUXWUAccess"=dword:00000001
+"DisableOSUpgrade"=dword:00000001
+
+; Disable Windows Update from other Microsoft products
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"DisableWindowsUpdateAccess"=dword:00000001
+
+; Disable Windows Update over metered connections
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate]
+"DeferFeatureUpdatesPeriodInDays"=dword:000004b0
+"DeferQualityUpdatesPeriodInDays"=dword:0000001e
+
+; Disable Windows Update notifications
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.WindowsUpdate.NotificationUIScenario]
+"Enabled"=dword:00000000

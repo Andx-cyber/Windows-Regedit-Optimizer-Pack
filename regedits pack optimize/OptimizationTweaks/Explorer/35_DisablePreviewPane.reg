@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+; Disable Preview Pane in Windows Explorer
+; This improves performance by preventing Windows from generating previews of files
+
+; Disable Preview Pane
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoPreviewPane"=dword:00000001
+
+; Disable Preview Pane (alternative method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (legacy method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (Windows 10/11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (Windows 10/11 alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (Windows 10/11 legacy)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (Windows 10/11 alternative method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable Preview Pane (Windows 10/11 legacy method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer]
+"PreviewPaneSizer"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00

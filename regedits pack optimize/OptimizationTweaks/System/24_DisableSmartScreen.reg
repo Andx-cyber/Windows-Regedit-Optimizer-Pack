@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows SmartScreen Filter
+; WARNING: This disables a security feature that helps protect against malicious files
+
+; Disable SmartScreen for Store apps
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableSmartScreen"=dword:00000000
+"ShellSmartScreenLevel"="Off"
+
+; Disable SmartScreen for Microsoft Edge
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
+"EnabledV9"=dword:00000000
+
+; Disable SmartScreen for Internet Explorer
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Internet Explorer\PhishingFilter]
+"EnabledV9"=dword:00000000
+
+; Disable SmartScreen for Windows Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
+"EnableWebContentEvaluation"=dword:00000000
+
+; Disable SmartScreen for Microsoft Store apps
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
+"PreventOverride"=dword:00000000
+
+; Disable SmartScreen for Office applications
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Security]
+"DisableTrustBar"=dword:00000001
+"DisableTrustedSites"=dword:00000001
+"UFIControls"=dword:00000001

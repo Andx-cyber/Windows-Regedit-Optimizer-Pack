@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; Disable User Account Control (UAC) prompts
+; WARNING: This reduces security by disabling UAC prompts
+; Only use if you understand the security implications
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000000
+"EnableInstallerDetection"=dword:00000000
+"EnableVirtualization"=dword:00000000
+
+; Disable UAC for built-in administrator account
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"FilterAdministratorToken"=dword:00000000
+
+; Disable UAC for standard users
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableUIADesktopToggle"=dword:00000000
+
+; Disable UAC file and registry virtualization
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableSecureUIAPaths"=dword:00000000

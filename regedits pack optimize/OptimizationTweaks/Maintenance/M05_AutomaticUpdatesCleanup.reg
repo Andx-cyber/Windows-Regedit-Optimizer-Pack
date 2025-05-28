@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; Automatic Windows Updates Cleanup
+; Configures automatic cleanup of Windows Update files
+
+; Enable cleanup of Windows Update files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Update Cleanup]
+"StateFlags0064"=dword:00000002
+
+; Set Windows Update cleanup to run automatically
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
+"AUOptions"=dword:00000004
+"ScheduledInstallDay"=dword:00000000
+"ScheduledInstallTime"=dword:00000003
+
+; Configure Windows Update cache settings
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"DoNotConnectToWindowsUpdateInternetLocations"=dword:00000000
+"DisableWindowsUpdateAccess"=dword:00000000
+
+; Enable Windows Update automatic maintenance
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
+"UxOption"=dword:00000000
+
+; Configure Windows Update delivery optimization
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization]
+"DODownloadMode"=dword:00000000
+"SystemSettingsDownloadMode"=dword:00000000
+
+; Clean up obsolete Windows updates
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\VersionCleanup]
+"CleanupState"=dword:00000001
+"DeferCleanupSourceState"=dword:00000000
+
+; Configure Windows Update cleanup policy
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
+"IncludeRecommendedUpdates"=dword:00000001
+"AutoInstallMinorUpdates"=dword:00000001
+
+; Enable Windows Update automatic restart
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoRebootWithLoggedOnUsers"=dword:00000000
+"NoAutoUpdate"=dword:00000000
+
+; Configure Windows Update active hours
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
+"ActiveHoursStart"=dword:00000008
+"ActiveHoursEnd"=dword:00000017
+"IsActiveHoursEnabled"=dword:00000001

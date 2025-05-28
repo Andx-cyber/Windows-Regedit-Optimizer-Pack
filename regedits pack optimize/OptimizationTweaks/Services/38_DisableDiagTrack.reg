@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; Disable Diagnostics Tracking Service (DiagTrack)
+; This service is used for telemetry and can be safely disabled for better privacy
+
+; Disable Diagnostics Tracking Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; Disable Connected User Experiences and Telemetry
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; Disable Connected User Experiences and Telemetry (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+"DoNotShowFeedbackNotifications"=dword:00000001
+"DisableTelemetryOptInChangeNotification"=dword:00000001
+"DisableTelemetryOptInUX"=dword:00000001
+
+; Disable Connected User Experiences and Telemetry (legacy method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+"DoNotShowFeedbackNotifications"=dword:00000001
+"DisableTelemetryOptInChangeNotification"=dword:00000001
+"DisableTelemetryOptInUX"=dword:00000001
+
+; Disable Connected User Experiences and Telemetry (Windows 10/11)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+"DoNotShowFeedbackNotifications"=dword:00000001
+"DisableTelemetryOptInChangeNotification"=dword:00000001
+"DisableTelemetryOptInUX"=dword:00000001
+
+; Disable Connected User Experiences and Telemetry (Windows 10/11 alternative)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+"DoNotShowFeedbackNotifications"=dword:00000001
+"DisableTelemetryOptInChangeNotification"=dword:00000001
+"DisableTelemetryOptInUX"=dword:00000001

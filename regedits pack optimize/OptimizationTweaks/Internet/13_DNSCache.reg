@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Optimize DNS cache settings for better internet performance
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+"CacheHashTableBucketSize"=dword:00000001
+"CacheHashTableSize"=dword:00000180
+"MaxCacheEntryTtlLimit"=dword:00015180
+"MaxSOACacheEntryTtlLimit"=dword:0000012d
+"MaxNegativeCacheTtl"=dword:00000012
+"NetFailureCacheTime"=dword:0000000a
+"NegativeSOACacheTime"=dword:0000003c
+"NetFailureErrorPopupEnabled"=dword:00000000
+"QueryIPMatching"=dword:00000001
+"QueryIpMatching"=dword:00000001
+"SecureResponses"=dword:00000001
+"EventLogLevel"=dword:00000001
+"MaxCacheTtl"=dword:00015180
+"MaxSOACacheTtl"=dword:0000012d
+
+; Enable DNS client-side caching
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache]
+"Start"=dword:00000002

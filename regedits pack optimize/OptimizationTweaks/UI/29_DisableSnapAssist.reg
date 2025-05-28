@@ -1,0 +1,44 @@
+Windows Registry Editor Version 5.00
+
+; Disable Snap Assist and Snap Windows features
+; This prevents windows from automatically resizing when dragged to screen edges
+
+; Disable Snap Assist when dragging windows to the top or sides
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WindowArrangementActive"="0"
+
+; Disable Snap Assist when resizing windows
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"SnapSizing"=dword:00000000
+
+; Disable Snap Assist when using keyboard shortcuts
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssist"=dword:00000001
+
+; Disable Snap Assist for Store apps
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssistForStoreApps"=dword:00000001
+
+; Disable Snap Assist for desktop apps
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssistForDesktopApps"=dword:00000001
+
+; Disable Snap Assist for all windows
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssistForAllWindows"=dword:00000001
+
+; Disable Snap Assist for all users
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssist"=dword:00000001
+
+; Disable Snap Assist for all windows (alternative method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssist"=dword:00000001
+
+; Disable Snap Assist for all users (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableSnapAssist"=dword:00000001
+
+; Disable Snap Assist for all windows (legacy method)
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"WindowArrangementActive"="0"

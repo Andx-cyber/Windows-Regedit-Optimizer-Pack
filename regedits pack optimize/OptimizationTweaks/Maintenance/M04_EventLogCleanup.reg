@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; Event Log Cleanup
+; Configures automatic cleanup of event logs
+
+; Set maximum log size and retention policy for Application log
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Application]
+"MaxSize"=dword:00080000
+"Retention"=dword:00000000
+"AutoBackupLogFiles"=dword:00000001
+
+; Set maximum log size and retention policy for System log
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System]
+"MaxSize"=dword:00080000
+"Retention"=dword:00000000
+"AutoBackupLogFiles"=dword:00000001
+
+; Set maximum log size and retention policy for Security log
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security]
+"MaxSize"=dword:00080000
+"Retention"=dword:00000000
+"AutoBackupLogFiles"=dword:00000001
+
+; Enable auto-backup of event logs
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{1edeee53-0afe-4609-b846-d8c0b2075b1f}\ChannelReferences\16]
+"Enabled"=dword:00000001
+
+; Configure event log retention (0=Overwrite as needed, 1=Archive when full, 2=Never overwrite)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Application]
+"Retention"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System]
+"Retention"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security]
+"Retention"=dword:00000000
+
+; Enable debug logging
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{1edeee53-0afe-4609-b846-d8c0b2075b1f}\ChannelReferences\16]
+"Enabled"=dword:00000001

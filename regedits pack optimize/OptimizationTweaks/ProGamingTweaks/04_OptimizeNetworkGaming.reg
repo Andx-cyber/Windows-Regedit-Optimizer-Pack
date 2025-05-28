@@ -1,0 +1,54 @@
+Windows Registry Editor Version 5.00
+
+; Optimizes network settings for online gaming by reducing latency and improving throughput
+; These settings help reduce ping and packet loss in online games
+
+; Optimize TCP/IP parameters for gaming
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"SystemResponsiveness"=dword:0000000a
+
+; Disable network throttling
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"NetworkThrottlingIndexHex"=dword:ffffffff
+
+; Optimize TCP window size
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpWindowSize"=dword:00007fff
+"Tcp1323Opts"=dword:00000003
+"DefaultTTL"=dword:00000040
+"EnablePMTUDiscovery"=dword:00000001
+"EnablePMTUBHDetect"=dword:00000000
+"SackOpts"=dword:00000001
+"TcpMaxDupAcks"=dword:00000002
+
+; Optimize network performance
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"SystemResponsiveness"=dword:0000000a
+
+; Disable network throttling for gaming
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"NetworkThrottlingIndexHex"=dword:ffffffff
+
+; Optimize TCP/IP parameters for gaming (alternative)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpWindowSize"=dword:00007fff
+"Tcp1323Opts"=dword:00000003
+"DefaultTTL"=dword:00000040
+"EnablePMTUDiscovery"=dword:00000001
+"EnablePMTUBHDetect"=dword:00000000
+"SackOpts"=dword:00000001
+"TcpMaxDupAcks"=dword:00000002
+
+; Optimize network performance (alternative)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"SystemResponsiveness"=dword:0000000a
+
+; Disable network throttling for gaming (alternative)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:ffffffff
+"NetworkThrottlingIndexHex"=dword:ffffffff

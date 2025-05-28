@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; Disable System Restore Points
+; This disables the automatic creation of system restore points
+
+; Disable System Restore
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
+"DisableSR"=dword:00000001
+
+; Disable System Restore (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore]
+"DisableSR"=dword:00000001
+
+; Disable System Restore (legacy method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\sr]
+"Start"=dword:00000004
+
+; Disable System Restore (Windows 10/11)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore]
+"DisableConfig"=dword:00000001
+"DisableSR"=dword:00000001

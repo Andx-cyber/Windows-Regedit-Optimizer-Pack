@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Startup Animation
+; This disables the animation that plays when Windows starts
+
+; Disable Startup Animation
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001
+
+; Disable Startup Animation (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001
+
+; Disable Startup Animation (legacy method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001
+
+; Disable Startup Animation (Windows 10/11)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001
+
+; Disable Startup Animation (Windows 10/11 alternative)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001
+
+; Disable Startup Animation (Windows 10/11 legacy)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableStartupAnimation"=dword:00000001

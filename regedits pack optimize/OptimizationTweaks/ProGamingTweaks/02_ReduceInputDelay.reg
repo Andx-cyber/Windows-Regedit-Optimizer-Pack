@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+
+; Reduces input delay by optimizing Windows' handling of input devices
+; This can improve responsiveness in games
+
+; Optimize for background services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026
+
+; Optimize for foreground applications
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"IoPageLockLimit"=dword:00004000
+"LargeSystemCache"=dword:00000001
+"SecondLevelDataCache"=dword:00000200
+"SystemPages"=dword:ffffffff
+
+; Disable background applications from receiving input focus
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"ForegroundLockTimeout"=dword:00030d40
+"ForegroundFlashCount"=dword:00000003
+"ForegroundAutoPromote"=dword:00000000
+
+; Optimize thread scheduling
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
+"DisableTs"=dword:00000000
+"DisableTsc"=dword:00000000
+"DisableTscControl"=dword:00000001
+
+; Optimize for background services
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
+"FeatureSettingsOverrideMask"=dword:00000003
+"FeatureSettingsOverride"=dword:00000003
+
+; Optimize for background services
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"SystemResponsiveness"=dword:0000000a
+"NetworkThrottlingIndex"=dword:ffffffff
+"GPU Priority"=dword:00000008
+"Scheduled Task Priority"=dword:00000007

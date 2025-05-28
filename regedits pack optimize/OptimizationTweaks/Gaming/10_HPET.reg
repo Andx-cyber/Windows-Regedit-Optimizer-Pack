@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; Disable HPET (High Precision Event Timer) for better gaming performance
+; Note: This may need to be disabled in BIOS for full effect
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HpSAMD]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HPET]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HPET_Service]
+"Start"=dword:00000004

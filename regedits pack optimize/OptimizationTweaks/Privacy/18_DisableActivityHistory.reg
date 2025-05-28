@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; Disable Activity History tracking
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"PublishUserActivities"=dword:00000000
+"UploadUserActivities"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\System]
+"EnableActivityFeed"=dword:00000000
+"PublishUserActivities"=dword:00000000
+"UploadUserActivities"=dword:00000000
+
+; Disable Timeline feature
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System\UserRights]
+"AllowActivityFeed"=dword:00000000
+
+; Disable activity history in Task View
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoInstrumentation"=dword:00000001

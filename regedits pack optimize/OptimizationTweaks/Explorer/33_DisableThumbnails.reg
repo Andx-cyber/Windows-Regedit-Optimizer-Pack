@@ -1,0 +1,50 @@
+Windows Registry Editor Version 5.00
+
+; Disable Thumbnails in Windows Explorer
+; This improves performance by preventing Windows from generating thumbnail previews
+
+; Disable thumbnails and only display file icons
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"IconsOnly"=dword:00000001
+"DisableThumbnails"=dword:00000001
+"DisableThumbnailCache"=dword:00000001
+"DisablePreviewOnMouseOverInAllViews"=dword:00000001
+
+; Disable thumbnail cache
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableThumbnailCache"=dword:00000001
+
+; Disable thumbnail generation for specific file types
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.bmp\ShellEx]
+"{BB2E617C-0920-11D1-9A0B-00C04FC2D6C1}"=hex(0):
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.gif\ShellEx]
+"{BB2E617C-0920-11D1-9A0B-00C04FC2D6C1}"=hex(0):
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpeg\ShellEx]
+"{BB2E617C-0920-11D1-9A0B-00C04FC2D6C1}"=hex(0):
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.jpg\ShellEx]
+"{BB2E617C-0920-11D1-9A0B-00C04FC2D6C1}"=hex(0):
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.png\ShellEx]
+"{BB2E617C-0920-11D1-9A0B-00C04FC2D6C1}"=hex(0):
+
+; Disable thumbnail preview in Windows Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoThumbnailCache"=dword:00000001
+
+; Disable thumbnails in Windows Explorer (alternative method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"DisableThumbnails"=dword:00000001
+"DisableThumbnailCache"=dword:00000001
+
+; Disable thumbnails in Windows Explorer (legacy method)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"DisableThumbnails"=dword:00000001
+"DisableThumbnailCache"=dword:00000001
+
+; Disable thumbnails in Windows Explorer (Windows 10/11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"DisableThumbnails"=dword:00000001
+"DisableThumbnailCache"=dword:00000001

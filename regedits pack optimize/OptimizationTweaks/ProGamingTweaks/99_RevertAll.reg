@@ -1,0 +1,81 @@
+Windows Registry Editor Version 5.00
+
+; This file restores all gaming-related registry tweaks to their default values
+; Use this if you experience any issues or want to revert all changes
+
+; Restore mouse settings
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"=- 
+"MouseThreshold1"=-
+"MouseThreshold2"=-
+"SmoothMouseXCurve"=-
+"SmoothMouseYCurve"=-
+
+; Restore Precision TouchPad settings
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad]
+"AAPThreshold"=-
+"AAPThresholdMax"=-
+"AACHeatmapMode"=-
+"AACEnabled"=-
+
+; Restore network settings
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=-
+"SystemResponsiveness"=-
+
+; Restore TCP/IP settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpWindowSize"=-
+"Tcp1323Opts"=-
+"DefaultTTL"=-
+"EnablePMTUDiscovery"=-
+"EnablePMTUBHDetect"=-
+"SackOpts"=-
+"TcpMaxDupAcks"=-
+
+; Restore Game DVR settings
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=-
+
+; Restore Game Bar settings
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"ShowStartupPanel"=-
+"AllowAutoGameMode"=-
+"AutoGameModeEnabled"=-
+"UseNexusForGameBarEnabled"=-
+
+; Restore USB settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0000]
+"EnhancedPowerManagementEnabled"=-
+"IdleEnable"=-
+"SelectiveSuspendEnabled"=-
+"USBBIOSxIP"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USB]
+"DisableSelectiveSuspend"=-
+"USBBIOSxIP"=-
+
+; Restore USB power management
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR]
+"Start"=dword:00000003
+
+; Restore USB performance settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"PowerSettings"=-
+"EnhancedPowerManagementEnabled"=-
+"IdleEnable"=-
+"SelectiveSuspendEnabled"=-
+
+; Restore USB selective suspend settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters]
+"DisableSelectiveSuspend"=-
+
+; Restore USB device performance settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"PowerSettings"=-
+"EnhancedPowerManagementEnabled"=-
+"IdleEnable"=-
+"SelectiveSuspendEnabled"=-

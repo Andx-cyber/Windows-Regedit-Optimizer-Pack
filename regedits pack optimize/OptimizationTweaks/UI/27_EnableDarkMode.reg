@@ -1,0 +1,65 @@
+Windows Registry Editor Version 5.00
+
+; Enable Dark Mode for Windows 10/11
+; This sets the system to use dark theme
+
+; Enable Dark Mode for Windows
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000
+"SystemUsesLightTheme"=dword:00000000
+"EnableTransparency"=dword:00000001
+
+; Enable Dark Mode for Windows 10/11 Start Menu, Taskbar, and Action Center
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001
+"EnableTransparency"=dword:00000001
+
+; Dark Mode for Windows 10/11 Title Bars
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001
+"EnableWindowColorization"=dword:00000000
+"ColorizationColor"=dword:00000000
+"ColorizationAfterglow"=dword:00000000
+"ColorizationColorBalance"=dword:00000000
+"EnableAeroPeek"=dword:00000001
+"AlwaysHibernateThumbnails"=dword:00000000
+
+; Dark Mode for File Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SystemUsesLightTheme"=dword:00000000
+
+; Dark Mode for Store Apps
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"AppsUseLightTheme"=dword:00000000
+
+; Dark Mode for Scrollbars (Windows 10 20H1+ and Windows 11)
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"SystemUsesLightTheme"=dword:00000000
+
+; Dark Mode for Context Menus (Windows 10 20H1+ and Windows 11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SystemUsesLightTheme"=dword:00000000
+
+; Dark Mode for Taskbar (Windows 11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001
+
+; Dark Mode for Title Bars (Windows 11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001
+
+; Dark Mode for Start Menu (Windows 11)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SystemUsesLightTheme"=dword:00000000
+
+; Dark Mode for Taskbar (Windows 10)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"ColorPrevalence"=dword:00000001
+
+; Dark Mode for Title Bars (Windows 10)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001
+
+; Dark Mode for Start Menu (Windows 10)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SystemUsesLightTheme"=dword:00000000

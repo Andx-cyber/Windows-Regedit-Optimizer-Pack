@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Disk Cleanup Settings
+; Configures Disk Cleanup to remove unnecessary files
+
+; Clear Windows Update Cleanup
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Update Cleanup]
+"StateFlags0064"=dword:00000002
+
+; Clear Windows Upgrade Log Files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Upgrade Discarded Files]
+"StateFlags0064"=dword:00000002
+
+; Clear System error memory dump files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\System error memory dump files]
+"StateFlags0064"=dword:00000002
+
+; Clear System error minidump files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\System error minidump files]
+"StateFlags0064"=dword:00000002
+
+; Clear Windows Error Reports
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Windows Error Reports]
+"StateFlags0064"=dword:00000002
+
+; Clear Windows Defender
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches\Windows Defender]
+"StateFlags0064"=dword:00000002

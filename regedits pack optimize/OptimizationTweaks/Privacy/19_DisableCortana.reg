@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Completely disable Cortana
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+"AllowCortana"=dword:00000000
+"DisableWebSearch"=dword:00000001
+"ConnectedSearchUseWeb"=dword:00000000
+"ConnectedSearchUseWebOverMeteredConnections"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
+"AllowCortanaAboveLock"=dword:00000000
+"AllowCloudSearch"=dword:00000000
+
+; Disable web search in Start Menu
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000
+"CortanaConsent"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
+"HistoryViewEnabled"=dword:00000000
+"DeviceHistoryEnabled"=dword:00000000
+"DeviceSearchHistoryEnabled"=dword:00000000
+"DeviceSearchSuggestionsEnabled"=dword:00000000
+"SearchboxTaskbarMode"=dword:00000001

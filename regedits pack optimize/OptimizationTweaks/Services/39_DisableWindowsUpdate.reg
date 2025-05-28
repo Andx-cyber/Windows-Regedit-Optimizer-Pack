@@ -1,0 +1,42 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Update Service
+; WARNING: This will prevent Windows from automatically downloading and installing updates
+; Only use this if you plan to manually check for updates
+
+; Disable Windows Update service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000004
+
+; Disable Windows Update Medic Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc]
+"Start"=dword:00000004
+
+; Disable Windows Update Orchestrator Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc]
+"Start"=dword:00000004
+
+; Disable Windows Update Auto Update
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+
+; Disable Windows Update (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"DisableWindowsUpdateAccess"=dword:00000001
+"SetDisableUXWUAccess"=dword:00000001
+"SetDisablePauseUXAccess"=dword:00000001
+"DisableOSUpgrade"=dword:00000001
+
+; Disable Windows Update (legacy method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"DisableWindowsUpdateAccess"=dword:00000001
+"SetDisableUXWUAccess"=dword:00000001
+"SetDisablePauseUXAccess"=dword:00000001
+"DisableOSUpgrade"=dword:00000001
+
+; Disable Windows Update (Windows 10/11)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"DisableWindowsUpdateAccess"=dword:00000001
+"SetDisableUXWUAccess"=dword:00000001
+"SetDisablePauseUXAccess"=dword:00000001
+"DisableOSUpgrade"=dword:00000001

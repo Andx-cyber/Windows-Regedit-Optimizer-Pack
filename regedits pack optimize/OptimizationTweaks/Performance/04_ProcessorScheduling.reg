@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Optimize processor scheduling for better performance
+; This setting prioritizes background services for better system responsiveness
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026

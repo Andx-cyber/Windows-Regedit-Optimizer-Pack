@@ -1,0 +1,41 @@
+Windows Registry Editor Version 5.00
+
+; Disable Superfetch, Prefetch, and SysMain services
+; This can improve performance on systems with SSDs and reduce disk usage
+
+; Disable Superfetch
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnableSuperfetch"=dword:00000000
+"EnablePrefetcher"=dword:00000000
+"EnableBootTrace"=dword:00000003
+"EnablePrefetch"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+"EnableBoot"=dword:00000000
+"EnableBootTrace"=dword:00000000
+"EnablePrefetcher"=dword:00000000
+"EnablePrefetch"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+
+; Disable SysMain service (Superfetch)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000004
+
+; Disable Prefetch
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+
+; Disable Superfetch (alternative method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000004
+
+; Disable Prefetch (alternative method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+
+; Disable Superfetch (legacy method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000004
+
+; Disable Prefetch (legacy method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000

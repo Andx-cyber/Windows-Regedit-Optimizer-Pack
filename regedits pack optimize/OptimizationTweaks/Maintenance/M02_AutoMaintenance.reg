@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Enable Automatic Maintenance
+; This enables Windows automatic maintenance
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
+"MaintenanceDisabled"=dword:00000000
+
+; Run maintenance daily at 2:00 AM
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
+"MaintenanceStartTime"=dword:00000008
+"MaintenanceFrequency"=dword:00000001
+"MaintenanceRandomDelay"=dword:0000000a
+
+; Enable automatic disk defragmentation
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout]
+"EnableAutoLayout"=dword:00000001
+
+; Run scheduled maintenance when computer is in use
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
+"AllowStartOnBatteries"=dword:00000001
+"NoAwayMode"=dword:00000000

@@ -1,0 +1,51 @@
+Windows Registry Editor Version 5.00
+
+; Disables and optimizes Game DVR and Game Bar to reduce system overhead
+; This can improve gaming performance by reducing background processes
+
+; Disable Game DVR
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+; Disable Game Bar tips
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"ShowStartupPanel"=dword:00000000
+"AllowAutoGameMode"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000
+"UseNexusForGameBarEnabled"=dword:00000000
+
+; Disable game capture
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+
+; Disable background recording
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"HistoricalCaptureEnabled"=dword:00000000
+
+; Disable game mode
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AllowAutoGameMode"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000
+
+; Disable game bar tips
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"ShowStartupPanel"=dword:00000000
+"AllowAutoGameMode"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000
+"UseNexusForGameBarEnabled"=dword:00000000
+
+; Disable game capture (alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+
+; Disable background recording (alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"HistoricalCaptureEnabled"=dword:00000000
+
+; Disable game mode (alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AllowAutoGameMode"=dword:00000000
+"AutoGameModeEnabled"=dword:00000000

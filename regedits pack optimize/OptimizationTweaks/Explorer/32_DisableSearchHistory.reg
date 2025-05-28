@@ -1,0 +1,51 @@
+Windows Registry Editor Version 5.00
+
+; Disable Search History in Windows Explorer and Start Menu
+; This prevents Windows from storing your search history
+
+; Disable search history in File Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_TrackDocs"=dword:00000000
+"Start_TrackProgs"=dword:00000000
+
+; Clear and disable search history
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery]
+@=hex(0):
+
+; Disable search history in Start Menu
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings]
+"IsDeviceSearchHistoryEnabled"=dword:00000000
+
+; Disable web search in Start Menu
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000
+"CortanaConsent"=dword:00000000
+
+; Disable search history in Cortana
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"HistoryViewEnabled"=dword:00000000
+"DeviceHistoryEnabled"=dword:00000000
+
+; Disable search history in Windows Search
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"DeviceHistoryEnabled"=dword:00000000
+"DeviceSearchHistoryEnabled"=dword:00000000
+
+; Disable search suggestions in Start Menu
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
+"SubscribedContent-338393Enabled"=dword:00000000
+"SubscribedContent-353694Enabled"=dword:00000000
+"SubscribedContent-353696Enabled"=dword:00000000
+
+; Disable search history in Windows Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WordWheelQuery]
+"Settings"=dword:00000000
+
+; Disable search history in Windows Search
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings]
+"IsDeviceSearchHistoryEnabled"=dword:00000000
+
+; Disable search history in Windows Search (alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search]
+"HistoryViewEnabled"=dword:00000000
+"DeviceHistoryEnabled"=dword:00000000

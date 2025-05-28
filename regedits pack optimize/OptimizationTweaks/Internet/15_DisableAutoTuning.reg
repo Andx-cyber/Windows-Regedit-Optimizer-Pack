@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; Disable TCP Auto-Tuning which can cause slow internet speeds on some networks
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"EnableRSS"=dword:00000000
+"EnableTCPA"=dword:00000000
+"EnableTCPChimney"=dword:00000000
+"EnableRSC"=dword:00000000
+"EnableTCPAckFrequency"=dword:00000000
+"TcpDelAckTicks"=dword:00000000
+"TcpAckFrequency"=dword:00000001
+
+; Disable Auto-Tuning for all network interfaces
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
+"EnableAutodial"=dword:00000000
+"NoNetAutodial"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched]
+"NonBestEffortLimit"=dword:00000000

@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Disable NTFS Last Access Time updates to improve disk performance
+; This reduces disk writes when accessing files
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"NtfsDisableLastAccessUpdate"=dword:00000001

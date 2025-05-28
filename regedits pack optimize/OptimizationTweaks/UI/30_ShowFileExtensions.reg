@@ -1,0 +1,44 @@
+Windows Registry Editor Version 5.00
+
+; Show file extensions in Windows Explorer
+; This makes it easier to identify file types and potential security risks
+
+; Show file extensions for known file types
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"HideFileExt"=dword:00000000
+
+; Show hidden files and folders
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000001
+
+; Show protected operating system files (Use with caution)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowSuperHidden"=dword:00000000
+
+; Show full path in the title bar
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CabinetState]
+"FullPath"=dword:00000001
+
+; Show file size information in folder tips
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowInfoTip"=dword:00000001
+
+; Show status bar in Windows Explorer
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\Main]
+"StatusBarOther"=dword:00000001
+
+; Show file attributes in Details view
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowAttribCol"=dword:00000001
+
+; Show file size in folder tips
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowInfoTip"=dword:00000001
+
+; Show file size in status bar
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StatusBar]
+"ShowStatusBar"=dword:00000001
+
+; Show file size in status bar (alternative)
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StatusBar]
+"StatusBarAll"=dword:00000001

@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Startup Sound
+; This disables the sound that plays when Windows starts
+
+; Disable Startup Sound
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001
+
+; Disable Startup Sound (alternative method)
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001
+
+; Disable Startup Sound (legacy method)
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001
+
+; Disable Startup Sound (Windows 10/11)
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001
+
+; Disable Startup Sound (Windows 10/11 alternative)
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001
+
+; Disable Startup Sound (Windows 10/11 legacy)
+[HKEY_CURRENT_USER\AppEvents\EventLabels\WindowsLogon]
+"ExcludeFromCPL"=dword:00000001

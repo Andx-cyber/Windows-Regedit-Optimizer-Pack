@@ -1,0 +1,49 @@
+Windows Registry Editor Version 5.00
+
+; Optimizes USB devices for gaming by increasing polling rates and reducing latency
+; This can improve responsiveness of gaming mice and keyboards
+
+; Increase USB polling rate to 1000Hz (1ms)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0000]
+"EnhancedPowerManagementEnabled"=dword:00000000
+"IdleEnable"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+"USBSelectiveSuspend"=dword:00000000
+"USBBIOSxIP"=dword:00000000
+
+; Disable USB selective suspend
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USB]
+"DisableSelectiveSuspend"=dword:00000001
+"USBBIOSxIP"=dword:00000000
+
+; Optimize USB root hub power management
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"PowerSettings"=hex:01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable USB power management
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR]
+"Start"=dword:00000003
+
+; Optimize USB performance
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"EnhancedPowerManagementEnabled"=dword:00000000
+"IdleEnable"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+
+; Disable USB selective suspend (alternative method)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBHUB3\Parameters]
+"DisableSelectiveSuspend"=dword:00000001
+
+; Optimize USB host controller
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"PowerSettings"=hex:01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+; Disable USB power saving
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"EnhancedPowerManagementEnabled"=dword:00000000
+"IdleEnable"=dword:00000000
+"SelectiveSuspendEnabled"=dword:00000000
+
+; Optimize USB device performance
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\<InstanceNumber>]
+"PowerSettings"=hex:01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00

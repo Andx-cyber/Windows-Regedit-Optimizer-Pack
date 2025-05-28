@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Enable Windows Game Mode for better gaming performance
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\GameBar]
+"AutoGameModeEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+"AudioCaptureEnabled"=dword:00000000
+"CursorCaptureEnabled"=dword:00000000
+"GameBarEnabled"=dword:00000000
+"GameDVR_Enabled"=dword:00000000

@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Disable Superfetch and Prefetcher for SSDs
+; This can reduce disk usage and improve responsiveness
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+"EnableBootTrace"=dword:00000000

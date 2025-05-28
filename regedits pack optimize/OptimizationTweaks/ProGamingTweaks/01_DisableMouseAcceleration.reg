@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; Disables mouse acceleration and enhances pointer precision
+; This makes mouse movement more consistent and predictable for gaming
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
+"SmoothMouseXCurve"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+"SmoothMouseYCurve"=hex:00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\PrecisionTouchPad]
+"AAPThreshold"=dword:00000001
+"AAPThresholdMax"=dword:00000001
+"AACHeatmapMode"=dword:00000000
+"AACEnabled"=dword:00000000

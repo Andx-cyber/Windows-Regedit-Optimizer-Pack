@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; Disable User Account Control (UAC)
+; WARNING: This reduces security by disabling UAC prompts
+
+; Disable UAC
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000000
+"EnableUIADesktopToggle"=dword:00000000
+"EnableVirtualization"=dword:00000000
+"FilterAdministratorToken"=dword:00000000
+
+; Disable UAC (alternative method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000000
+
+; Disable UAC (legacy method)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+
+; Disable UAC (Windows 10/11)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"EnableLUA"=dword:00000000
+"ConsentPromptBehaviorAdmin"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000000
+"EnableUIADesktopToggle"=dword:00000000

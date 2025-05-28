@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Optimize Windows memory management by disabling memory compression
+; This can improve performance on systems with 8GB+ RAM
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"DisablePagingExecutive"=dword:00000001
+"LargeSystemCache"=dword:00000001
+"IoPageLockLimit"=dword:00040000
